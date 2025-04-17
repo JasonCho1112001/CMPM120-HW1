@@ -1,0 +1,320 @@
+{
+    "Title": "The Quest For Lunch",
+    "Credits": "Created by Jason Cho (jcho111@ucsc.edu).",
+    "InitialLocation": "Bed",
+    "Locations": {
+        "Bed": {
+            "Body": "You're in bed right now. Time to get up.",
+            "Choices": [
+                {
+                    "Text": "Get out of bed",
+                    "Target": "Room"
+                }
+                
+            ]
+        },
+        "Room": {
+            "Body": "You're standing up in your room now. It's time to get ready for class.",
+            "Choices": [
+                {
+                    "Text": "Brush Teeth",
+                    "Target": "Brush Teeth"
+                },
+                {
+                    "Text": "No time for brushing teeth! Get a move on!",
+                    "Target": "Bus Stop"
+                }
+            ]
+        },
+        "Brush Teeth": {
+            "Body": "You should have listened to yourself. You're running out of time! Hurry get to the bus stop!",
+            "Choices": [
+                {
+                    "Text": "Why did I wake up so late?",
+                    "Target": "Bus Stop"
+                }
+            ]
+        },
+        "Bus Stop": {
+            "Body": "You just got to the bus stop... \n THERE'S A BUS WAITING AT THE STOP! Can you catch it in time?",
+            "Choices": [
+                {
+                    "Text": "Run! We can catch this bus!",
+                    "Target": "Run for the bus"
+                },
+                {
+                    "Text": "There's no way we catch this bus, I'll walk",
+                    "Target": "Wait for bus"
+                }
+            ]
+        },
+        "Run for the bus": {
+            "Body": "You ran like the wind and you're right at the door to the bus! \n The doors slowly begin closing and you wave at the bus driver... \n But she just shrugs and pretends you're not there.",
+            "Choices": [
+                {
+                    "Text": "I guess we take the next bus...",
+                    "Target": "Wait for bus"
+                }
+            ]
+        },
+        "Wait for bus": {
+            "Body": "You wait for the next bus. It takes you to your class but you've got to be ten minutes late by now.",
+            "Choices": [
+                {
+                    "Text": "I'm so screwed...",
+                    "Target": "Arrive at Class Late"
+                }
+            ]
+            
+        },
+        "Arrive at Class Late": {
+            "Body": "You've arrived at class. Turns out, the professor doesn't mind when people are late. Things happen. You sit down and do what a student does best and learn in class. \n\n However, because you missed the first fifteen minutes of class, you decide to stay after class to clarify a few things before heading out.",
+            "Choices": [
+                {
+                    "Text": "It's time for lunch!",
+                    "Target": "Lunch"
+                },
+                {
+                    "Text": "No time for lunch, let's go home and study already!",
+                    "Target": "No Lunch"
+                }
+            ]
+            
+        },
+        "Lunch": {
+            "Body": "You've arrived at the dining hall and it's time to chow down! You reach for your ID and... ",
+            "Choices": [
+                {
+                    "Text": "And?",
+                    "Target": "Lunch 2"
+                }
+            ]
+            
+        },
+        "No Lunch": {
+            "Body": "You decide not to get lunch and head home to study. However, the ghost of No Lunch Future appears in front of you and presents you with a vision. You peer into the vision and see yourself unable to study and malnourished. Perhaps this is a sign that you should grab lunch after all.",
+            "Choices": [
+                {
+                    "Text": "Maybe I will grab lunch after all...",
+                    "Target": "Lunch"
+                }
+            ]
+            
+        },
+        "Lunch 2": {
+            "Body": "And...",
+            "Choices": [
+                {
+                    "Text": "And...?",
+                    "Target": "Lunch 3"
+                }
+            ]
+            
+        },
+        "Lunch 3": {
+            "Body": "Any second now...",
+            "Choices": [
+                {
+                    "Text": "What are we waiting for???",
+                    "Target": "Lunch 4"
+                }
+            ]
+            
+        },
+        "Lunch 4": {
+            "Body": "Oh man...",
+            "Choices": [
+                {
+                    "Text": "What is it?",
+                    "Target": "Lunch 5"
+                }
+            ]
+            
+        },
+        "Lunch 5": {
+            "Body": "You don't have your ID... You must have forgotten it in your room or something...",
+            "Choices": [
+                {
+                    "Text": "Head back to your room and look for that ID!",
+                    "Target": "Head to your room"
+                }
+            ]
+            
+        },
+        "Head to your room": {
+            "Body": "You head back to your dorm and go up the elevator. You are now standing in front of your room. You can't open your room door without the ID. You can't get your ID without opening your room door. Seems like a catch-22 scenario. You'll have to look around for your room mates.",
+            "Choices": [
+                {
+                    "Text": "Head down to the Porter Square",
+                    "Target": "Porter Square"
+                }
+            ]
+            
+        },
+        "Porter Square": {
+            "Body": "The wonderful Porter Square. Also known as the quad. This is where every naked run begins. The sun is shining bright on the grass and there's even a couple of guys throwing a frisbee around. You don't see your roommates anywhere.",
+            "Choices": [
+                {
+                    "Text": "Head to the Computer Lab",
+                    "Target": "Computer Lab"
+                },
+                {
+                    "Text": "Head to the Porter Apartments",
+                    "Target": "Porter Apartments"
+                },
+                {
+                    "Text": "Head to the Library",
+                    "Target": "The Library"
+                },
+                {
+                    "Text": "Head to the Dining Hall",
+                    "Target": "Dining Hall"
+                },
+                {
+                    "Text": "Head to your room",
+                    "Target": "The Room"
+                }
+            ]
+            
+        },
+        "Dining Hall": {
+            "Body": "The Dining Hall. While the food doesn't knock your socks off, it keeps you well fed. Sometimes when you feel like something different, you order takeout.",
+            "Choices": [
+                {
+                    "Text": "(No student ID) Head back to the Porter Square",
+                    "Target": "Porter Square"
+                },
+                {
+                    "Text": "(You have your student ID) Time to pay $12.75 for some curly fries and chicken breast!",
+                    "Target": "Beyond",
+                    "Condition": "canGoToLunch"
+                },
+                {
+                    "Text": "(You have your room mate's student ID) Nice try, buddy. You're going to have to get your real ID if you want a real lunch.",
+                    "Target": "Porter Square",
+                    "Condition": "hasKey"
+                }
+            ]
+            
+        },
+        "Computer Lab": {
+            "Body": "The Computer Lab. This is where people have found to be the best place to lock in and study. Still no room mates.",
+            "Choices": [
+                {
+                    "Text": "Head back to the Porter Square",
+                    "Target": "Porter Square"
+                }
+            ]
+            
+        },
+        "Porter Apartments": {
+            "Body": "You're not sure why you ended up at the Porter Apartments but it's good to be thorough. The wonderful furniture in the living rooms are on full display as always, almost as if the tenants know that they have it good.",
+            "Choices": [
+                {
+                    "Text": "Head to the Porter Square",
+                    "Target": "Porter Square"
+                }
+            ]
+            
+        },
+        "The Library": {
+            "Body": "You're at the library. Knowing that your room mates are computer science majors, you know that you're bound to bump into one of them at the library at some point.",
+            "Choices": [
+                {
+                    "Text": "Look around the library",
+                    "Target": "Library 2"
+                },
+                {
+                    "Text": "Head to the Porter Square",
+                    "Target": "Porter Square"
+                }
+            ]
+            
+        },
+        "Library 2": {
+            "Body": "You immediately find one of your room mates studying in one of the quiet areas. He seems to be watching tiktok dances on three separate devices at once.",
+            "Choices": [
+                {
+                    "Text": "Ask him to open the room door for you",
+                    "Target": "Library 3"
+                }
+            ]
+            
+        },
+        "Library 3": {
+            "Body": "He looks at you in annoyance. He seems to be bothered that somebody interrupted his tiktok time. 'What was that?' he says.",
+            "Choices": [
+                {
+                    "Text": "Tell him that you need your ID and you left it in the room",
+                    "Target": "Library 4"
+                }
+            ]
+            
+        },
+        "Library 4": {
+            "Body": "'Ohhh... Yeah I can do that for you... but you have to do something for me too.'",
+            "Choices": [
+                {
+                    "Text": "What do you want?",
+                    "Target": "Library 5"
+                }
+            ]
+            
+        },
+        "Library 5": {
+            "Body": "'So I've been watching Squid Game Season 1 and I love how there's this dude who can make people play games with him and he gets to slap them in the face if they lose. I'm thinking I wanna do the same thing but with a coin flip. What do you say? If you win, I give you my ID and you get to grab lunch. If you lose, I get to slap you in the face and we try again.'",
+            "Choices": [
+                {
+                    "Text": "You leave me with no choice.",
+                    "Target": "Coin Flip"
+                }
+            ]
+            
+        },
+        "The Room": {
+            "Body": "You're back at your room.",
+            "Choices": [
+                {
+                    "Text": "Head to the the Porter Square",
+                    "Target": "Porter Square"
+                },
+                {
+                    "Text": "(Room mate's ID acquired) Enter your room and grab your ID",
+                    "Target": "The Room 2",
+                    "Condition": "hasKey"
+                }
+            ]
+            
+        },
+        "The Room 2": {
+            "Body": "You enter your room and see your student ID right on your desk. You finally got your ID back! That was a lot of work. Hopefully you don't forget it next time. Now you can head to the dining hall and eat lunch!",
+            "Choices": [
+                {
+                    "Text": "Head to the Porter Square",
+                    "Target": "Porter Square"
+                }
+            ]
+            
+        },
+        "Beyond": {
+            "Body": "You get your food and sit down. It's time to chow down! Congratulations, you have acquired lunch. This is going to fuel your studies for the afternoon. Best of luck to you!"
+        }
+    },
+
+    "SpecialLocations": {
+        "Coin Flip": {
+            "Body": "",
+            "Choices": [
+                {
+                    "Text": "Flip the coin again",
+                    "Target": "Coin Flip"
+                },
+                {
+                    "Text": "Let's get out of the library. He had it coming.",
+                    "Target": "The Library",
+                    "Condition": "coinFlipWon"
+                }
+            ]
+        }
+    }
+}
